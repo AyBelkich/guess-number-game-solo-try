@@ -5,6 +5,8 @@ def main():
 
     print("guess the number between 1 and 100")
 
+    attempts = 0
+
     while True:
         guess_str = input("guess:")
 
@@ -17,10 +19,12 @@ def main():
 
         if guess > secret_number:
             print("too high")
+            attempts += 1
         elif guess < secret_number:
             print("too low")
+            attempts += 1
         else:
-            print("win")
+            print("win in", attempts, "attempts")
             break
 if __name__ == "__main__":
     main()
