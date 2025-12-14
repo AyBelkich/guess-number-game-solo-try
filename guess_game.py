@@ -18,11 +18,11 @@ def main():
             continue
 
         if guess > secret_number:
-            print("too high")
             attempts += 1
+            print("too high, attempts used:", attempts)
         elif guess < secret_number:
-            print("too low")
             attempts += 1
+            print("too low, attempts used:", attempts)
         else:
             print("win in", attempts, "attempts")
             break
